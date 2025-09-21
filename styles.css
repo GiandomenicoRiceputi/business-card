@@ -1,0 +1,89 @@
+body {
+    margin: 20px;
+    /*
+    Challenge:
+    Find a web safe font you like, and add it 
+    to your card.
+    */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* 1. Define the keyframes for the pulse effect */
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  50% {
+    box-shadow: 0 2px 20px rgba(255, 105, 180, 0.8); /* Strong pink glow at midpoint */
+  }
+  100% {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.avatar {
+    width: 150px;
+     transition: all 0.3s ease;
+}
+
+.avatar:hover {
+    border-radius: 30%;
+}
+
+.card {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    background: #e9ff70;
+    color: #003049;
+    
+    transition: all 0.3s ease;
+        
+    /*
+    Challenge:
+    Find a color palette you like on Coolors.co
+    and use it in your business card.
+     */
+}
+
+.border-style {
+    border: 2.5px solid #70d6ff;
+}
+
+.border-r {
+    border-radius: 2.5%;
+}
+
+.shadow-b {
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.card:hover {
+    background: #fee440;
+    
+      transform: translateY(-5px); /* Lifts the card (smoothed by transition) */
+  
+  /* 2. Call the animation on hover */
+  animation-name: pulse-glow; /* Link to the keyframes */
+  animation-duration: 1.5s;   /* Time for one full cycle */
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite; /* Makes it repeat forever while hovering */
+}
+
+
+
+/*
+Stretch goals:
+Find other ways you can personalize 
+the design of your business card, e.g.:
+- change the border(s)
+- add border radius
+- shuffle the layout
+- shadows        🤯
+- hover effects  🤯🤯
+- animations     🤯🤯🤯
+*/
+
